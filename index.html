@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/calculos.css" />
     <title>Factorial de n</title>
     <script src="js/calculos.js"></script>
-             
 </head>
 
 <body>
@@ -15,13 +14,17 @@
     </header>
     <nav></nav>
     <main>
-
         <article class="botones">
             <h2>Múltiplos de 'n' hasta 'm'</h2>
             <p>
                 <input type="button" onclick="n = leerNumero()" value="Primer número" />
                 <input type="button" onclick="m = leerNumero()" value="Segundo número" />
-                <input type="button" onclick="mostrarResultados()" value="Mostrar resultados" />
+
+                <!--<input type="button" onclick="mostrarMultiplos(n, m)"
+                     value="Mostrar resultados" />
+                   / >-->
+
+                <input type="button" onclick="mostrarResultados(multiplo, n, m)" value="Mostrar resultados" />
             </p>
 
             <table class="resultados">
@@ -46,8 +49,8 @@
         <article class="botones">
             <h2>Factorial de 'n'</h2>
             <p>
-                <input type="button" onclick="n = leerNumero()" value="Primer número" />
-                <input type="button" onclick="mostrarFactorial( n )" value="Mostrar factorial" />
+                <input type="button" onclick="pepe = leerNumero()" value="Primer número" />
+                <input type="button" onclick="mostrarFactorial(pepe)" value="Mostrar resultados" />
             </p>
             <table class="resultados">
                 <caption>Tabla de resultados</caption>
