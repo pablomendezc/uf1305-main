@@ -52,8 +52,15 @@ function multiplosDeHasta(n, m) {
         multiplo = n * i;
         mensaje = mensaje + multiplo + " ";
     }
-
     return mensaje;
+
+    //while
+    //i = 1;
+    //while (multiplo < n ){
+    //multiplo = n * i;
+    //mensaje = mensaje + mutiplo + " ";
+    //i++;
+    //}
 }
 
 function factorial( nf ) {
