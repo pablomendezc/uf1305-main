@@ -1,5 +1,4 @@
-
-       // Definir variables
+//Definir variables
 // var n = 0;
 
 // Funcion para leer numeros Reales
@@ -10,7 +9,7 @@ function leerNumero() {
     return num;
 }
 
-function mostrarMultiplos(n, m) {
+function mostrarMultiplo(n, m) {
     document.getElementById('td11').innerHTML = n;
     document.getElementById('td12').innerHTML = m;
     document.getElementById('td13').innerHTML = multiplosDeHasta(n, m);
@@ -23,17 +22,23 @@ function mostrarFactorial( nf ) {
 }
 
 
-function mostrarResultados(op, n1, n2 = 0) {
-    
-switch (op){
-    case 'multiplo':
-    document.getElementById('td11').innerHTML = n1;
-    document.getElementById('td12').innerHTML = n2;
-    document.getElementById('td13').innerHTML = multiplosDeHasta(n1, n2);
-    break;
+function mostrarResultados( op, n1, n2 = 0 ) {
 
-    default:
+    switch (op) {
+        case 'multiplo':
+            document.getElementById('td11').innerHTML = n1;
+            document.getElementById('td12').innerHTML = n2;
+            document.getElementById('td13').innerHTML = multiplosDeHasta(n1, n2);
+        break;
+
+        case 'factorial' :
+            document.getElementById('td21').innerHTML = n1;
+            document.getElementById('td22').innerHTML = factorial( n1 );
+        break;
+        default:
+    }
 }
+
 
 
 function multiplosDeHasta(n, m) {
@@ -56,6 +61,6 @@ function factorial( nf ) {
     for ( i=1; i <= nf; i++ ) {
         factorial = factorial * i;
     }
-    
     return factorial;
 }
+      
