@@ -2,6 +2,39 @@
 // var n = 0;
 
 // Funcion para leer numeros Reales
+
+
+//funcion para leeer texto
+
+function leerTexto() {
+    texto = prompt ("porfi, escribe un nombre del personaje");
+        
+   return texto;
+
+}
+function mostarInfo(id, tag, info, texto){
+    var elemento = document.getElementById(id);
+
+    var etiqueta = "<" + tag + ">";
+    etiqueta += info;
+    etiqueta += "</" + tag + "> ";
+    etiqueta += texto;
+   
+    elemento.innerHTML = etiqueta;
+}
+
+
+//Function para insertar texto en html
+
+function mostrarTexto( id, texto ){
+var elemento = document.getElementById(id);
+
+
+elemento.innerHTML = texto;
+
+}
+
+
 function leerNumero() {
     num = parseInt(
         prompt("Porfi, escribe un número")
