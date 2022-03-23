@@ -26,11 +26,41 @@
 </head>
 
 <body>
-    <header>
+    <header id="header1">
         <h1>Calculos con JavaScript</h1>
     </header>
     <nav></nav>
     <main>
+        <article>
+            <h2>Jugando con getElementById</h2>
+            <p>
+                <button onclick="pj = leerTexto()">
+                    Personaje
+                </button>
+                <button onclick="mostrarInfo('pj1', 'strong', 'Personaje:', pj)">Mostrar Personaje</button>
+            </p>
+            <p>
+                <button onclick="ald = leerTexto()">
+                    Aldea
+                </button>
+                <button onclick="mostrarInfo('ald1', 'em', 'Aldea: ',ald)">Mostrar Aldea</button>
+            </p>
+            <p>
+                <button onclick="clan = leerTexto()">
+                    Clan
+                </button>
+                <button onclick="mostrarInfo('clan1', 'strong', 'Clan: ', clan)">Mostrar Clan</button>
+                <!-- <button onclick="mostrarTexto(
+                    'clan1',
+                    '<strong>Abril y Diana</strong> son las más guapas del Reino'
+                )">Mostrar Clan</button> -->
+            </p>
+
+            <p id="pj1"></p>
+            <p id="ald1"></p>
+            <p id="clan1"></p>
+        </article>
+
         <article>
             <h2>Escribir factorial de un número con document.write()</h2>
             <p>
@@ -82,40 +112,8 @@
                 </script>
             </p>
         </article>
-        <article>
-            <h2>jugando con getElementById</h2>
-            <p>
-                <button onclick=" pj = leerTexto()">
-                Personaje
 
-                </button>
-                <button onclick ="mostrarInfo('pj1', 'strong', 'Personaje:', pj)">Mostrar Personaje
-                </button>
-                
-            </p>
-            <p id='pj1'></p>
-        
-            <p>
-                <button onclick=" pj = leerTexto()">
-                Aldea
 
-                </button>
-                <button onclick ="mostrarAldea('aldea1',aldea)">mostrar aldea
-                </button>
-                
-            </p>
-            <p id='aldea1'></p>
-        
-            <p>
-                <button onclick=" pj = leerTexto()">
-                Clan
-                </button>
-                <button onclick ="mostrarClan('clan1',clan)">mostrar clan
-                </button>
-                
-            </p>
-            <p id='clan1'></p>
-        </article>
 
 
 
