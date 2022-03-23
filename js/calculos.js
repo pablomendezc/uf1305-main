@@ -2,45 +2,67 @@
 // var n = 0;
 
 // Funcion para leer numeros Reales
-
-
-//funcion para leeer texto
-
-function leerTexto() {
-    texto = prompt ("porfi, escribe un nombre del personaje");
-        
-   return texto;
-
-}
-function mostarInfo(id, tag, info, texto){
-    var elemento = document.getElementById(id);
-
-    var etiqueta = "<" + tag + ">";
-    etiqueta += info;
-    etiqueta += "</" + tag + "> ";
-    etiqueta += texto;
-   
-    elemento.innerHTML = etiqueta;
-}
-
-
-//Function para insertar texto en html
-
-function mostrarTexto( id, texto ){
-var elemento = document.getElementById(id);
-
-
-elemento.innerHTML = texto;
-
-}
-
-
 function leerNumero() {
     num = parseInt(
         prompt("Porfi, escribe un número")
     );
     return num;
 }
+
+// Función para leer texto
+function leerTexto() {
+    texto = prompt("Porfi, escribe el nombre de tu personaje");
+    return texto;
+}
+
+// Función para insertar texto en el HTML
+
+function mostrarTexto( id, texto ){
+    var elemento = document.getElementById(id);
+
+    // Insertamos el texto pasado por parámetro
+    // al elemento con id pasado por parámetro
+    elemento.innerHTML = texto;
+}
+
+function mostrarTodo(id, personaje, aldea, clan){
+var li = "<li>"
+}
+
+
+function mostrarInfo(id, tag, info, texto){
+    var contenido = "<" + tag + ">";
+    contenido += info;
+    contenido += "</" + tag + "> ";
+    contenido += texto;
+
+
+    mostrarTexto( id, contenido );
+}
+
+function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
+   
+    var personaje = "<strong>Personaje: </strong>" + personaje;
+    var aldea = "<strong>Aldea: </strong>" + aldea;
+    var clan = "<strong>Clan: </strong>" + clan;
+    var poder = "<strong>Supercosas: </strong>" + poder;
+    var vidas = "<strong>vidas: </strong>" + vidas;
+
+    var lis = "<li>" + personaje + "</li>";
+     lis += "<li>" + aldea +"</li>";
+     lis += "<li>" + clan + "</li>";
+     lis += "<li>" + poder +"</li>";
+     lis += "<li>" + vidas + "</li>";
+}
+
+
+var elemento = document.getElementById(id);
+elemento.innerHTML = lis;
+
+
+
+
+
 
 function mostrarMultiplo(n, m) {
     document.getElementById('td11').innerHTML = n;
@@ -59,7 +81,8 @@ function mostrarResultados( op, n, m = 0 ) {
 
     switch (op) {
         case 'multiplo':
-            document.getElementById('td11').innerHTML = n;
+            var td11 =document.getElementById('td11');
+            td11.innerHTML = n;
             document.getElementById('td12').innerHTML = m;
             document.getElementById('td13').innerHTML = multiplosDeHasta(n, m);
         break;
